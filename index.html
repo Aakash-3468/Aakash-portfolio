@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aakash N | Data Science Aspirant & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Aakash N - Data Science Aspirant & B.Tech AI & Data Science student. Hands-on in Python, Machine Learning, Power BI, MySQL, and Healthcare AI research.">
+  <meta name="keywords" content="Aakash N, Data Science, Machine Learning, AI, Python, Power BI, MySQL, Healthcare AI, Portfolio">
+  <meta name="author" content="Aakash N">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Canvas for Neural Network / Particle Mesh -->
+  <canvas id="neuralCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Aakash</span>
+        <span class="logo-dot">.</span>
+        <span class="logo-role">DS</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects & Demo</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#research" class="nav-link">Research & Certs</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button class="btn btn-outline-glow btn-sm" id="viewResumeBtn">
+          <i class="fa-solid fa-file-pdf"></i> Resume
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="pulse-dot"></span>
+            <span>Available for Entry-Level Data Analyst & Data Science Roles</span>
+          </div>
+
+          <h1 class="hero-title animate-slide-up">
+            Hi, I'm <span class="gradient-text">Aakash N</span>
+          </h1>
+
+          <div class="typing-container animate-slide-up delay-1">
+            <span class="typing-prefix">I specialize in </span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+
+          <p class="hero-bio animate-slide-up delay-2">
+            Aspiring Data Science professional pursuing <strong>B.Tech in Artificial Intelligence & Data Science</strong> at Anna University. Passionate about transforming raw data into actionable insights, building predictive machine learning models, and engineering intelligent solutions.
+          </p>
+
+          <div class="hero-actions animate-slide-up delay-3">
+            <a href="#projects" class="btn btn-primary-glow">
+              <i class="fa-solid fa-flask"></i> Explore Projects & Live Demo
+            </a>
+            <a href="#contact" class="btn btn-secondary-glass">
+              <i class="fa-solid fa-paper-plane"></i> Get in Touch
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="hero-metrics animate-slide-up delay-4">
+            <div class="metric-item">
+              <span class="metric-number">2027</span>
+              <span class="metric-label">B.Tech AI & DS (Anna Univ)</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number">2+</span>
+              <span class="metric-label">Conference Papers Presented</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number">ML & BI</span>
+              <span class="metric-label">Python • Power BI • MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Profile / Tech HUD -->
+        <div class="hero-visual animate-fade-in delay-2">
+          <div class="tech-hud-card glass-panel">
+            <div class="hud-header">
+              <div class="hud-status">
+                <span class="status-indicator"></span>
+                <span>STATUS: READY TO DEPLOY</span>
+              </div>
+              <div class="hud-location">
+                <i class="fa-solid fa-location-dot"></i> Tamil Nadu, India
+              </div>
+            </div>
+
+            <div class="profile-avatar-container">
+              <div class="avatar-ring"></div>
+              <div class="avatar-glow"></div>
+              <div class="avatar-fallback">
+                <span class="avatar-initials">AN</span>
+                <i class="fa-solid fa-chart-network avatar-bg-icon"></i>
+              </div>
+            </div>
+
+            <h3 class="hud-name">Aakash N</h3>
+            <p class="hud-role">DATA SCIENCE ASPIRANT</p>
+
+            <div class="hud-skills-pill-group">
+              <span class="hud-pill"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="hud-pill"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+              <span class="hud-pill"><i class="fa-solid fa-chart-pie"></i> Power BI</span>
+              <span class="hud-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+              <span class="hud-pill"><i class="fa-solid fa-table"></i> Excel</span>
+            </div>
+
+            <div class="hud-contact-quick">
+              <a href="mailto:aakashebiofficial@gmail.com" class="hud-contact-link" title="Email Aakash">
+                <i class="fa-solid fa-envelope"></i> aakashebiofficial@gmail.com
+              </a>
+              <a href="tel:+916380397679" class="hud-contact-link" title="Call Aakash">
+                <i class="fa-solid fa-phone"></i> +91 6380397679
+              </a>
+            </div>
+
+            <div class="hud-footer">
+              <span class="hud-terminal-text"><i class="fa-solid fa-terminal"></i> python model.predict(patient_data)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">OVERVIEW</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Transforming data into useful insights & building reliable AI-driven solutions</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="about-header-icon">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <h3>Professional Profile</h3>
+            <p>
+              I am an aspiring Data Science and Machine Learning professional currently pursuing a <strong>B.Tech in Artificial Intelligence and Data Science (2023 – 2027)</strong> at <strong>Anna University — AKT Memorial College of Engineering and Technology</strong>.
+            </p>
+            <p>
+              With strong hands-on exposure to Python, data preprocessing, machine learning algorithms, Excel, Power BI, and MySQL through academic and research work, I bring robust analytical thinking and problem-solving skills to every data challenge.
+            </p>
+            <div class="contact-badges">
+              <span class="badge-item"><i class="fa-solid fa-location-dot"></i> Ulundurpet, Tamil Nadu</span>
+              <span class="badge-item"><i class="fa-solid fa-envelope"></i> aakashebiofficial@gmail.com</span>
+              <span class="badge-item"><i class="fa-solid fa-phone"></i> +91 6380397679</span>
+            </div>
+          </div>
+
+          <div class="strengths-grid">
+            <div class="strength-card glass-panel">
+              <div class="strength-icon cyan">
+                <i class="fa-solid fa-bolt-lightning"></i>
+              </div>
+              <div class="strength-info">
+                <h4>Quick Learner</h4>
+                <p>Swiftly adapting to new algorithmic frameworks, data libraries, and industry analytics tools.</p>
+              </div>
+            </div>
+
+            <div class="strength-card glass-panel">
+              <div class="strength-icon purple">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <div class="strength-info">
+                <h4>Analytical Problem Solver</h4>
+                <p>Deconstructing complex datasets to discover root causes, patterns, and predictive features.</p>
+              </div>
+            </div>
+
+            <div class="strength-card glass-panel">
+              <div class="strength-icon emerald">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="strength-info">
+                <h4>Consistent & Dependable</h4>
+                <p>Dedicated to structured workflows, clean code, rigorous testing, and reliable data integrity.</p>
+              </div>
+            </div>
+
+            <div class="strength-card glass-panel">
+              <div class="strength-icon rose">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <div class="strength-info">
+                <h4>Data Communication</h4>
+                <p>Presenting technical findings clearly through interactive dashboards and academic research papers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS & LIVE DEMO SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">PORTFOLIO SHOWCASE</span>
+          <h2 class="section-title">Projects & <span class="gradient-text">Live AI Demo</span></h2>
+          <p class="section-subtitle">Explore machine learning systems and test the live AI disease prediction simulator</p>
+        </div>
+
+        <!-- FEATURED PROJECT 1 WITH LIVE INTERACTIVE SIMULATOR -->
+        <div class="featured-project-card glass-panel">
+          <div class="featured-badge">
+            <i class="fa-solid fa-star"></i> Flagship Machine Learning Project
+          </div>
+
+          <div class="featured-project-grid">
+            <div class="project-details">
+              <h3 class="project-title">Transforming Healthcare with AI-Powered Disease Prediction Based on Patient Data</h3>
+              
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Data Preprocessing</span>
+                <span class="tag">Feature Selection</span>
+                <span class="tag">Classification</span>
+                <span class="tag">Healthcare AI</span>
+              </div>
+
+              <p class="project-desc">
+                Developed an end-to-end Machine Learning model to predict disease vulnerability and risk factors using multi-dimensional patient health indicators.
+              </p>
+
+              <div class="project-bullets">
+                <div class="bullet-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Data Preprocessing & Feature Selection:</strong> Handled missing attributes, scaled continuous variables, and applied correlation filtering to isolate critical health predictors.</span>
+                </div>
+                <div class="bullet-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Classification Algorithms:</strong> Implemented and evaluated Supervised Classification models (Random Forest, SVM, Logistic Regression) for high early-detection sensitivity.</span>
+                </div>
+                <div class="bullet-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Clinical Decision Architecture:</strong> Engineered a modular pipeline supporting reliable, data-backed diagnostic assistance for healthcare professionals.</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary-glow" id="scrollToDemoBtn">
+                  <i class="fa-solid fa-play"></i> Test Interactive Simulator
+                </button>
+              </div>
+            </div>
+
+            <!-- LIVE INTERACTIVE ML DEMO SIMULATOR WIDGET -->
+            <div class="live-demo-widget glass-panel" id="liveDemoWidget">
+              <div class="demo-widget-header">
+                <div class="demo-title">
+                  <i class="fa-solid fa-microchip"></i>
+                  <span>Live AI Prediction Simulator</span>
+                </div>
+                <span class="demo-status-pill">ML Model Active</span>
+              </div>
+
+              <p class="demo-intro">Adjust patient vitals below to evaluate disease risk confidence in real-time:</p>
+
+              <form id="predictionForm" class="demo-controls-form">
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="glucoseInput">Fasting Glucose (mg/dL)</label>
+                    <span class="control-val" id="glucoseVal">115</span>
+                  </div>
+                  <input type="range" id="glucoseInput" min="70" max="220" value="115" class="slider">
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="bpInput">Blood Pressure (Systolic mmHg)</label>
+                    <span class="control-val" id="bpVal">125</span>
+                  </div>
+                  <input type="range" id="bpInput" min="80" max="190" value="125" class="slider">
+                </div>
+
+                <div class="control-grid-two">
+                  <div class="control-group">
+                    <div class="control-label-row">
+                      <label for="bmiInput">BMI (kg/m²)</label>
+                      <span class="control-val" id="bmiVal">26.4</span>
+                    </div>
+                    <input type="range" id="bmiInput" min="16" max="45" step="0.1" value="26.4" class="slider">
+                  </div>
+
+                  <div class="control-group">
+                    <div class="control-label-row">
+                      <label for="ageInput">Patient Age (Years)</label>
+                      <span class="control-val" id="ageVal">38</span>
+                    </div>
+                    <input type="range" id="ageInput" min="18" max="85" value="38" class="slider">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="hrInput">Resting Heart Rate (bpm)</label>
+                    <span class="control-val" id="hrVal">76</span>
+                  </div>
+                  <input type="range" id="hrInput" min="50" max="130" value="76" class="slider">
+                </div>
+              </form>
+
+              <!-- Prediction Output Display -->
+              <div class="prediction-result-panel" id="predictionResult">
+                <div class="result-top">
+                  <div class="result-risk-level">
+                    <span class="risk-label">Estimated Risk:</span>
+                    <span class="risk-badge risk-low" id="riskBadge">LOW RISK</span>
+                  </div>
+                  <div class="confidence-box">
+                    <span class="conf-label">Confidence:</span>
+                    <span class="conf-number" id="confidenceVal">88.4%</span>
+                  </div>
+                </div>
+
+                <!-- Probability Progress Bar -->
+                <div class="risk-bar-container">
+                  <div class="risk-bar-fill" id="riskBarFill" style="width: 22%;"></div>
+                </div>
+
+                <div class="result-explanation" id="resultExplanation">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span id="explanationText">All baseline indicators are within normal healthy ranges. Early detection algorithms assess minimal clinical risk.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADDITIONAL PROJECTS GRID -->
+        <div class="projects-grid">
+          <!-- Project 2 -->
+          <div class="project-card glass-panel">
+            <div class="project-card-header">
+              <div class="project-type-icon purple">
+                <i class="fa-solid fa-chart-column"></i>
+              </div>
+              <span class="project-year">Data Analytics</span>
+            </div>
+            <h4 class="card-title">Interactive Business Intelligence & Sales Analytics Dashboard</h4>
+            <p class="card-desc">
+              Designed dynamic Power BI reports connected to MySQL database pipelines for multi-region sales performance, profit margins, customer segmentation, and automated KPI tracking.
+            </p>
+            <div class="card-tags">
+              <span>Power BI</span>
+              <span>MySQL</span>
+              <span>Advanced Excel</span>
+              <span>DAX</span>
+              <span>ETL</span>
+            </div>
+            <div class="card-footer">
+              <span class="project-highlight"><i class="fa-solid fa-chart-line"></i> Automated KPI Forecasting</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card glass-panel">
+            <div class="project-card-header">
+              <div class="project-type-icon cyan">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <span class="project-year">Python Suite</span>
+            </div>
+            <h4 class="card-title">Automated Exploratory Data Analysis & Classification Pipeline</h4>
+            <p class="card-desc">
+              Created reusable Python workflow for dataset profiling, automated handling of missing data, outlier detection, feature correlation heatmaps, and multi-model benchmark evaluation.
+            </p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Scikit-Learn</span>
+              <span>Seaborn</span>
+              <span>Matplotlib</span>
+            </div>
+            <div class="card-footer">
+              <span class="project-highlight"><i class="fa-solid fa-code-compare"></i> Multi-Model Benchmarking</span>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card glass-panel">
+            <div class="project-card-header">
+              <div class="project-type-icon emerald">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <span class="project-year">Database Engineering</span>
+            </div>
+            <h4 class="card-title">Relational Healthcare Database Schema & Query Optimization</h4>
+            <p class="card-desc">
+              Engineered structured MySQL relational database schemas for medical records, patient vitals, diagnostic histories with optimized indexing and complex analytical queries.
+            </p>
+            <div class="card-tags">
+              <span>MySQL</span>
+              <span>SQL Queries</span>
+              <span>Schema Design</span>
+              <span>Indexing</span>
+              <span>Data Security</span>
+            </div>
+            <div class="card-footer">
+              <span class="project-highlight"><i class="fa-solid fa-bolt"></i> High-Efficiency Querying</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">TECHNICAL EXPERTISE</span>
+          <h2 class="section-title">Data Science & AI <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Comprehensive toolkit across programming, machine learning, data visualization & databases</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="skills-filter-container">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="programming">Programming</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning</button>
+          <button class="filter-btn" data-filter="analytics">Data & BI</button>
+          <button class="filter-btn" data-filter="database">Databases</button>
+          <button class="filter-btn" data-filter="tools">Web & Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Python -->
+          <div class="skill-card glass-panel" data-category="programming">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper python-icon">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <span class="skill-level">Core Proficiency</span>
+            </div>
+            <h4 class="skill-name">Python</h4>
+            <p class="skill-details">Data processing, machine learning modeling, statistical scripting, and scientific computing.</p>
+            <div class="skill-chips">
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>Scikit-Learn</span>
+              <span>Matplotlib</span>
+              <span>Seaborn</span>
+            </div>
+          </div>
+
+          <!-- Machine Learning -->
+          <div class="skill-card glass-panel" data-category="ml">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper ml-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <span class="skill-level">Specialized</span>
+            </div>
+            <h4 class="skill-name">Machine Learning</h4>
+            <p class="skill-details">Supervised classification, feature engineering, predictive algorithms, model evaluation & validation.</p>
+            <div class="skill-chips">
+              <span>Classification</span>
+              <span>Feature Selection</span>
+              <span>Data Preprocessing</span>
+              <span>Model Evaluation</span>
+            </div>
+          </div>
+
+          <!-- Power BI -->
+          <div class="skill-card glass-panel" data-category="analytics">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper bi-icon">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <span class="skill-level">Certified (Basic)</span>
+            </div>
+            <h4 class="skill-name">Power BI</h4>
+            <p class="skill-details">Interactive business intelligence dashboards, visual KPI reports, DAX expressions, data transformations.</p>
+            <div class="skill-chips">
+              <span>Interactive Dashboards</span>
+              <span>DAX</span>
+              <span>Data Modeling</span>
+              <span>Visual Reports</span>
+            </div>
+          </div>
+
+          <!-- Excel -->
+          <div class="skill-card glass-panel" data-category="analytics">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper excel-icon">
+                <i class="fa-solid fa-file-excel"></i>
+              </div>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h4 class="skill-name">Data Analysis in Excel</h4>
+            <p class="skill-details">Data cleaning, pivot tables, statistical functions, VLOOKUP/XLOOKUP, and conditional formatting.</p>
+            <div class="skill-chips">
+              <span>Pivot Tables</span>
+              <span>Statistical Functions</span>
+              <span>Charts</span>
+              <span>VLOOKUP</span>
+            </div>
+          </div>
+
+          <!-- MySQL -->
+          <div class="skill-card glass-panel" data-category="database">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper mysql-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h4 class="skill-name">MySQL & Databases</h4>
+            <p class="skill-details">Relational database schemas, CRUD operations, joins, aggregations, and query optimization.</p>
+            <div class="skill-chips">
+              <span>Schema Design</span>
+              <span>Complex Joins</span>
+              <span>Subqueries</span>
+              <span>Data Integrity</span>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card glass-panel" data-category="programming">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper java-icon">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <span class="skill-level">Basic Foundations</span>
+            </div>
+            <h4 class="skill-name">Java</h4>
+            <p class="skill-details">Object-Oriented Programming principles, algorithms, data structures, and core logic.</p>
+            <div class="skill-chips">
+              <span>OOPs</span>
+              <span>Data Structures</span>
+              <span>Basic Logic</span>
+            </div>
+          </div>
+
+          <!-- Web Technologies -->
+          <div class="skill-card glass-panel" data-category="tools">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper web-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span class="skill-level">Applied</span>
+            </div>
+            <h4 class="skill-name">Web Technologies</h4>
+            <p class="skill-details">Building interactive user interfaces, web applications, and responsive data displays.</p>
+            <div class="skill-chips">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="skill-card glass-panel" data-category="tools">
+            <div class="skill-top">
+              <div class="skill-icon-wrapper tools-icon">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <span class="skill-level">Applied</span>
+            </div>
+            <h4 class="skill-name">Tools & Software</h4>
+            <p class="skill-details">Scientific computation, presentation, collaborative versioning, and development environments.</p>
+            <div class="skill-chips">
+              <span>MATLAB</span>
+              <span>MS Office</span>
+              <span>VS Code</span>
+              <span>Jupyter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH PAPERS & CERTIFICATIONS -->
+    <section class="section research-section" id="research">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">ACADEMIC EXCELLENCE</span>
+          <h2 class="section-title">Conferences & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Academic research contributions, conference presentations, and professional credentials</p>
+        </div>
+
+        <div class="research-grid">
+          <!-- Conference Paper 1 -->
+          <div class="conference-card glass-panel">
+            <div class="card-accent-tag international">
+              <i class="fa-solid fa-globe"></i> International Conference
+            </div>
+            <div class="conf-content">
+              <span class="conf-date">2026 Presentation</span>
+              <h3 class="conf-title">Presented Paper at ICETABICT'26</h3>
+              <p class="conf-venue">
+                <strong>International Conference on Emerging Trends in AI, Bio-informatics & Information and Communication Technology</strong>
+              </p>
+              <p class="conf-desc">
+                Presented research work on AI-powered predictive disease modeling, discussing feature importance in health diagnostics and classification benchmarks.
+              </p>
+              <div class="conf-badges">
+                <span><i class="fa-solid fa-award"></i> Paper Presenter</span>
+                <span><i class="fa-solid fa-microchip"></i> AI Healthcare</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conference Paper 2 -->
+          <div class="conference-card glass-panel">
+            <div class="card-accent-tag national">
+              <i class="fa-solid fa-landmark"></i> National Conference
+            </div>
+            <div class="conf-content">
+              <span class="conf-date">2026 Presentation</span>
+              <h3 class="conf-title">Presented Paper at NCARMS 2026</h3>
+              <p class="conf-venue">
+                <strong>National Conference on Advanced Research in Mathematical Sciences and Computing</strong>
+              </p>
+              <p class="conf-desc">
+                Presented analytical methodologies applying mathematical optimization and machine learning feature extraction to real-world datasets.
+              </p>
+              <div class="conf-badges">
+                <span><i class="fa-solid fa-award"></i> Paper Presenter</span>
+                <span><i class="fa-solid fa-square-root-variable"></i> Applied Math & AI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Workshop -->
+          <div class="conference-card glass-panel">
+            <div class="card-accent-tag workshop">
+              <i class="fa-solid fa-lightbulb"></i> Incubation & Workshop
+            </div>
+            <div class="conf-content">
+              <span class="conf-date">Hands-on Incubation</span>
+              <h3 class="conf-title">AI Workshop at Atal Incubation Centre</h3>
+              <p class="conf-venue">
+                <strong>PEC Foundation — Atal Incubation Centre</strong>
+              </p>
+              <p class="conf-desc">
+                Active participant in specialized AI innovation workshops, exploring machine learning deployment, startup ideation, and emerging technological applications.
+              </p>
+              <div class="conf-badges">
+                <span><i class="fa-solid fa-rocket"></i> AI Innovation</span>
+                <span><i class="fa-solid fa-certificate"></i> Participant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS ROW -->
+        <div class="certs-section-block">
+          <h3 class="subsection-title text-center"><i class="fa-solid fa-certificate"></i> Professional Certifications</h3>
+          <div class="certs-grid">
+            <div class="cert-card glass-panel">
+              <div class="cert-icon-box">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="cert-info">
+                <h4>HDCA Programming Certification</h4>
+                <p>Honours Diploma in Computer Applications — Comprehensive programming and application foundations.</p>
+                <span class="cert-status verified"><i class="fa-solid fa-circle-check"></i> Certified</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-panel">
+              <div class="cert-icon-box bi">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Power BI – Basic Certification</h4>
+                <p>Completed comprehensive training in data ingestion, DAX calculations, and interactive BI visual analytics.</p>
+                <span class="cert-status verified"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION JOURNEY TIMELINE -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">ACADEMIC PATHWAY</span>
+          <h2 class="section-title">Education <span class="gradient-text">Journey</span></h2>
+          <p class="section-subtitle">Academic qualifications in Artificial Intelligence, Data Science, and Computer Science</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Item 1: B.Tech -->
+          <div class="timeline-item right">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-year">2023 – 2027 (Pursuing)</span>
+              <h3 class="timeline-degree">B.Tech, Artificial Intelligence and Data Science</h3>
+              <h4 class="timeline-institution">Anna University — AKT Memorial College of Engineering and Technology</h4>
+              <p class="timeline-desc">
+                Core coursework includes Data Structures & Algorithms, Machine Learning, Statistical Inference, Database Management Systems (MySQL), Big Data Foundations, Python for Data Science, and Artificial Intelligence Architecture.
+              </p>
+              <div class="timeline-tags">
+                <span>Machine Learning</span>
+                <span>Data Science</span>
+                <span>Anna University</span>
+                <span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Higher Secondary -->
+          <div class="timeline-item left">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-year">2022 – 2023</span>
+              <h3 class="timeline-degree">Higher Secondary (12th Grade), Computer Science</h3>
+              <h4 class="timeline-institution">Higher Secondary Board Education</h4>
+              <p class="timeline-desc">
+                Built foundational concepts in computer science, algorithmic logic, structured programming, and mathematics with high academic standing.
+              </p>
+              <div class="timeline-tags">
+                <span>Computer Science</span>
+                <span>Mathematics</span>
+                <span>Programming Foundations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CONNECT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">CONNECT</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtitle">Interested in working together or hiring for an entry-level Data Analyst/Data Scientist role? Let's talk!</p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left: Contact Details Cards -->
+          <div class="contact-info-column">
+            <div class="contact-card glass-panel">
+              <div class="contact-icon email">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-card-content">
+                <h4>Email Address</h4>
+                <a href="mailto:aakashebiofficial@gmail.com" class="contact-val">aakashebiofficial@gmail.com</a>
+                <span class="contact-hint">Quick response within 24 hours</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon phone">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-card-content">
+                <h4>Phone & WhatsApp</h4>
+                <a href="tel:+916380397679" class="contact-val">+91 6380397679</a>
+                <span class="contact-hint">Available for calls & WhatsApp</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon location">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-card-content">
+                <h4>Location</h4>
+                <span class="contact-val">Ulundurpet, Tamil Nadu, India</span>
+                <span class="contact-hint">Open to on-site, hybrid, or remote opportunities</span>
+              </div>
+            </div>
+
+            <div class="quick-connect-links glass-panel">
+              <h4>Social & Developer Profiles</h4>
+              <div class="social-btn-group">
+                <a href="mailto:aakashebiofficial@gmail.com" class="social-btn" title="Email" aria-label="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+916380397679" class="social-btn" title="Phone Call" aria-label="Phone">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="https://wa.me/916380397679" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp Chat" aria-label="WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub Profile" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-column">
+            <div class="form-container glass-panel">
+              <h3 class="form-heading"><i class="fa-solid fa-paper-plane"></i> Send a Message</h3>
+              <p class="form-subtext">Drop a line regarding internship opportunities, collaborations, or data science roles.</p>
+
+              <form id="contactForm" class="contact-form">
+                <div class="form-row-two">
+                  <div class="form-field">
+                    <label for="senderName">Your Name <span class="required">*</span></label>
+                    <input type="text" id="senderName" name="name" required placeholder="e.g. Alex Morgan" class="form-input">
+                  </div>
+                  <div class="form-field">
+                    <label for="senderEmail">Your Email <span class="required">*</span></label>
+                    <input type="email" id="senderEmail" name="email" required placeholder="alex@company.com" class="form-input">
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="senderSubject">Subject</label>
+                  <input type="text" id="senderSubject" name="subject" placeholder="Data Analyst Role / Project Inquiry" class="form-input">
+                </div>
+
+                <div class="form-field">
+                  <label for="senderMessage">Message <span class="required">*</span></label>
+                  <textarea id="senderMessage" name="message" rows="5" required placeholder="Hi Aakash, we reviewed your healthcare AI project and would love to discuss an opportunity..." class="form-textarea"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary-glow btn-block" id="sendMessageBtn">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="form-status-alert" id="formStatusAlert"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="logo-name">Aakash N</span>
+          <span class="footer-title">| Data Science Aspirant</span>
+        </div>
+        <p class="footer-copy">© 2026 Aakash N. Built with passion for Artificial Intelligence and Data Analytics.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+        <a href="mailto:aakashebiofficial@gmail.com">aakashebiofficial@gmail.com</a>
+        <a href="tel:+916380397679">+91 6380397679</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div class="resume-modal-overlay" id="resumeModal">
+    <div class="resume-modal-content glass-panel">
+      <div class="resume-modal-header">
+        <div class="modal-header-title">
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Aakash N — Professional Resume</span>
+        </div>
+        <div class="modal-header-actions">
+          <button class="btn btn-sm btn-primary-glow" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close-btn" id="closeResumeModalBtn" aria-label="Close Modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="resume-paper-body">
+        <div class="resume-sheet">
+          <header class="resume-sheet-header">
+            <h1 class="r-name">AAKASH N</h1>
+            <h2 class="r-sub">DATA SCIENCE ASPIRANT</h2>
+            <div class="r-contact">
+              <span>Ulundurpet, Tamil Nadu</span> | 
+              <a href="tel:+916380397679">+91 6380397679</a> | 
+              <a href="mailto:aakashebiofficial@gmail.com">aakashebiofficial@gmail.com</a>
+            </div>
+          </header>
+
+          <section class="r-section">
+            <h3 class="r-title">PROFESSIONAL SUMMARY</h3>
+            <p class="r-text">
+              Aspiring Data Science professional pursuing a B.Tech in Artificial Intelligence and Data Science, with hands-on exposure to Python, data preprocessing, machine learning, Excel, Power BI, and MySQL through academic work. Strong analytical and problem-solving skills with an interest in transforming data into useful insights and building data-driven solutions. Seeking an entry-level Data Analyst or Data Science role.
+            </p>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">EDUCATION</h3>
+            <div class="r-entry">
+              <div class="r-entry-head">
+                <strong>B.Tech, Artificial Intelligence and Data Science</strong>
+                <span class="r-date">2023 – 2027 (Pursuing)</span>
+              </div>
+              <div class="r-entry-sub">Anna University — AKT Memorial College of Engineering and Technology</div>
+            </div>
+            <div class="r-entry">
+              <div class="r-entry-head">
+                <strong>Higher Secondary (12th), Computer Science</strong>
+                <span class="r-date">2022 – 2023</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">PROJECT</h3>
+            <div class="r-entry">
+              <strong class="r-proj-title">Transforming Healthcare with AI-Powered Disease Prediction Based on Patient Data</strong>
+              <ul class="r-bullets">
+                <li>Developed a machine learning model to predict diseases using patient health data.</li>
+                <li>Applied data preprocessing and feature selection techniques to prepare data for analysis and modeling.</li>
+                <li>Implemented classification algorithms for early and reliable disease detection.</li>
+                <li>Designed the system architecture to support data-driven healthcare decisions and patient outcomes.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">DATA SCIENCE SKILLS</h3>
+            <ul class="r-skill-list">
+              <li><strong>Programming:</strong> Python, Java (Basic)</li>
+              <li><strong>Data Analysis & Visualization:</strong> Excel, Power BI (Basic)</li>
+              <li><strong>Databases:</strong> MySQL</li>
+              <li><strong>Machine Learning:</strong> Data preprocessing, feature selection, classification</li>
+              <li><strong>Web Technologies:</strong> HTML, CSS</li>
+              <li><strong>Tools:</strong> MATLAB, MS Office</li>
+              <li><strong>Other:</strong> Analytical Thinking, Problem-Solving, Communication</li>
+            </ul>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">CERTIFICATIONS & CONFERENCES</h3>
+            <ul class="r-bullets">
+              <li>HDCA Programming Certification</li>
+              <li>Presented a paper at ICETABICT'26 International Conference</li>
+              <li>Participated in AI Workshop, Atal Incubation Centre – PEC Foundation</li>
+              <li>Presented a paper at NCARMS 2026 Conference</li>
+              <li>Power BI – Basic, Completed</li>
+            </ul>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">STRENGTHS</h3>
+            <ul class="r-bullets r-strengths">
+              <li>Hard worker</li>
+              <li>Quick learner</li>
+              <li>Consistent and dependable</li>
+            </ul>
+          </section>
+
+          <section class="r-section declaration">
+            <h3 class="r-title">DECLARATION</h3>
+            <p class="r-text">I hereby declare that the above information is true to the best of my knowledge.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toastNotification"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
